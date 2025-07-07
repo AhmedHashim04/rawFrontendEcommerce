@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modex - Your Ultimate Shopping Destination</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add these custom styles for marketing enhancements */
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-icon {
+            font-size: 8rem;
+            color: rgba(255,255,255,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .sticker-offer {
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .sticker-offer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .countdown-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 0.7rem;
+            padding: 5px 8px;
+            background: #ff6b6b;
+            border-radius: 20px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .social-proof {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            font-style: italic;
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        /* Collection card hover effect */
+        .cool-collection-card {
+            transition: all 0.3s ease;
+        }
+        
+        .cool-collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Product card styling */
+        .product-card {
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        ⏳ Limited Time Offer: Up to 50% OFF! Shop Now Before Deals Expire
+    </div>
+
+    <!-- A. Top navigation bar -->
+    <div style="background-color: rgb(29, 32, 32);" class="modex-manage-nav d-flex align-items-center justify-content-between px-2 px-md-3 py-1 flex-wrap">
+        <!-- ... (keep existing top nav) ... -->
+    </div>
+
+    <!-- B. Main navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark modex-navbar">
+        <!-- ... (keep existing main nav) ... -->
+    </nav>
+
+    <!-- C. Subnav -->
+    <nav class="navbar navbar-expand-lg navbar-light modex-subnav">
+        <!-- ... (keep existing subnav) ... -->
+    </nav>
+
+    <!-- D. Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <span class="badge bg-warning text-dark mb-3">🔥 TRENDING NOW</span>
+                    <h1 class="display-4 fw-bold mb-3">Smart Shopping Starts Here</h1>
+                    <p class="lead mb-4">Discover exclusive deals and premium products in our marketplace. Join 500,000+ satisfied shoppers!</p>
+                    
+                    <!-- Social Proof -->
+                    <div class="social-proof p-3 rounded mb-4">
+                        <p class="mb-1">"Saved $120 on my last purchase! Best deals online!" ⭐⭐⭐⭐⭐</p>
+                        <small>- Sarah K., Verified Buyer</small>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary btn-lg me-3">Shop Now</a>
+                        <a href="#featured-products" class="btn btn-outline-light btn-lg">View Hot Deals</a>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badge">
+                        <span><i class="fas fa-lock me-1"></i>Secure Checkout</span>
+                        <span><i class="fas fa-shield-alt me-1"></i>Buyer Protection</span>
+                        <span><i class="fas fa-truck me-1"></i>Free Shipping</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <i class="fas fa-gem hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- L. Sticker Offer Slider (Moved Up) -->
+    <section class="py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">🔥 Hot Deals</h2>
+                <div class="countdown-badge">
+                    <i class="fas fa-clock me-1"></i> 
+                    <span id="dealCountdown">15:00</span> LEFT!
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Sticker Offer 1 -->
+                <div class="col-md-3 col-6">
+                    <div class="sticker-offer p-4 text-center bg-light position-relative">
+                        <span class="badge bg-danger position-absolute top-0 start-0">-50%</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sticker 1" width="60" class="mb-2">
+                        <h5 class="fw-bold mb-1">Buy 1 Get 1 Free</h5>
+                        <p class="mb-2 small">On select fashion stickers</p>
+                        <a href="products.html?cat=stickers&offer=bogof" class="btn btn-warning btn-sm fw-semibold">Shop Now</a>
+                    </div>
+                </div>
+                
+                <!-- Sticker Offer 2 -->
+                <div class="col-md-3 col-6">
+                    <div class="sticker-offer p-4 text-center bg-light position-relative">
+                        <span class="badge bg-danger position-absolute top-0 start-0">-30%</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Sticker 2" width="60" class="mb-2">
+                        <h5 class="fw-bold mb-1">Flash Sale</h5>
+                        <p class="mb-2 small">Limited time discounts</p>
+                        <a href="products.html?cat=stickers&offer=20off" class="btn btn-primary btn-sm fw-semibold">Grab Deal</a>
+                    </div>
+                </div>
+                
+                <!-- Sticker Offer 3 -->
+                <div class="col-md-3 col-6">
+                    <div class="sticker-offer p-4 text-center bg-light position-relative">
+                        <span class="badge bg-danger position-absolute top-0 start-0">New</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Sticker 3" width="60" class="mb-2">
+                        <h5 class="fw-bold mb-1">New Arrivals</h5>
+                        <p class="mb-2 small">Fresh designs just in</p>
+                        <a href="products.html?cat=stickers&offer=limited" class="btn btn-purple btn-sm fw-semibold">See Collection</a>
+                    </div>
+                </div>
+                
+                <!-- Sticker Offer 4 -->
+                <div class="col-md-3 col-6">
+                    <div class="sticker-offer p-4 text-center bg-light position-relative">
+                        <span class="badge bg-success position-absolute top-0 start-0">Free</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="Sticker 4" width="60" class="mb-2">
+                        <h5 class="fw-bold mb-1">Free Shipping</h5>
+                        <p class="mb-2 small">On orders over $25</p>
+                        <a href="products.html?cat=stickers&offer=shipping" class="btn btn-success btn-sm fw-semibold">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. Advertisement Banner (Summer Sale) -->
+    <div class="container mt-4">
+        <div class="ad-banner rounded p-5" style="background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3 class="h2 mb-3">🎉 SUMMER SALE - UP TO 50% OFF!</h3>
+                    <p class="lead mb-4">Limited time offer on electronics, fashion, and more. Don't miss out!</p>
+                    <a href="products.html?sale=true" class="btn btn-dark btn-lg">Shop Sale Items</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="countdown-box bg-white p-3 rounded">
+                        <p class="mb-1">Offer ends in:</p>
+                        <h4 id="summerCountdown" class="fw-bold">24:00:00</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- H. Cool Collections Banner and Cards -->
+    <section class="cool-collections-section py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-2">🔥 Popular Collections</h2>
+                    <p class="mb-0 text-muted">Handpicked selections our customers love</p>
+                </div>
+                <a href="collections.html" class="btn btn-outline-dark">View All Collections</a>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Collection Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0">
+                        <div class="cool-collection-img-wrapper">
+                            <img src="assets/collections/gadgets.png" alt="Smart Gadgets" class="img-fluid rounded-top-4">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-1">Smart Gadgets</h5>
+                            <p class="text-muted small mb-2">Latest tech & trending electronics</p>
+                            <a href="collections.html?col=smart-gadgets" class="btn btn-outline-primary btn-sm fw-semibold">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0 cool-collection-ad">
+                        <div class="cool-collection-img-wrapper position-relative">
+                            <img src="assets/collections/fashion.png" alt="Trending Fashion" class="img-fluid rounded-top-4">
+                            <span class="cool-collection-badge">Bestseller</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-1">Trending Fashion</h5>
+                            <p class="text-muted small mb-2">Fresh looks and exclusive styles</p>
+                            <a href="collections.html?col=trending-fashion" class="btn btn-outline-danger btn-sm fw-semibold">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0">
+                        <div class="cool-collection-img-wrapper">
+                            <img src="assets/collections/home.png" alt="Home Essentials" class="img-fluid rounded-top-4">
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-1">Home Essentials</h5>
+                            <p class="text-muted small mb-2">Upgrade your living space</p>
+                            <a href="collections.html?col=home-essentials" class="btn btn-outline-success btn-sm fw-semibold">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0 cool-collection-ad">
+                        <div class="cool-collection-img-wrapper position-relative">
+                            <img src="assets/collections/beauty.png" alt="Beauty & Self-Care" class="img-fluid rounded-top-4">
+                            <span class="cool-collection-badge">New</span>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-1">Beauty & Self-Care</h5>
+                            <p class="text-muted small mb-2">Top beauty and wellness picks</p>
+                            <a href="collections.html?col=beauty" class="btn btn-outline-warning btn-sm fw-semibold">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G. Featured Products - Enhanced -->
+    <section class="py-5" id="featured-products">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h2 class="mb-0">🔥 Trending Now</h2>
+                    <p class="text-muted">Customers are loving these products</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-outline-dark active" data-filter="all">All</button>
+                        <button class="btn btn-outline-dark" data-filter="trending">Best Sellers</button>
+                        <button class="btn btn-outline-dark" data-filter="sale">Deals</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-3">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product">
+                            <span class="badge bg-danger product-badge">-30%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <p class="card-text text-muted small">Premium sound quality</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-danger fw-bold">$89.99</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">$129.99</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-3">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product">
+                            <span class="badge bg-success product-badge">New</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Watch Pro</h5>
+                            <p class="card-text text-muted small">Health & fitness tracker</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">$199.99</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-3">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product">
+                            <span class="badge bg-danger product-badge">-25%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bluetooth Speaker</h5>
+                            <p class="card-text text-muted small">360° immersive sound</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-danger fw-bold">$74.99</span>
+                                    <span class="text-muted text-decoration-line-through ms-2">$99.99</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-3">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product">
+                            <span class="badge bg-warning product-badge">Bestseller</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fitness Tracker</h5>
+                            <p class="card-text text-muted small">Heart rate & sleep monitor</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">$59.99</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-dark btn-lg">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- J. More Reasons to Shop - Streamlined -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Customers Love Modex</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <i class="fas fa-shipping-fast fa-3x text-primary mb-3"></i>
+                        <h4>Free & Fast Shipping</h4>
+                        <p class="text-muted">Free delivery on orders over $50. Get it in 2-3 days.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <i class="fas fa-undo-alt fa-3x text-success mb-3"></i>
+                        <h4>Easy Returns</h4>
+                        <p class="text-muted">30-day hassle-free returns. No questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 text-center p-4">
+                        <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+                        <h4>Secure Shopping</h4>
+                        <p class="text-muted">Your data is protected with bank-level security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- K. Recommended For You - Personalized -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Selected Just For You</h2>
+            <div class="row g-4" id="recommendedPackages">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <span class="badge bg-primary mb-3">New Customer</span>
+                            <h5 class="fw-bold mb-2">Starter Pack</h5>
+                            <p class="text-muted mb-3">Essential products at a great price</p>
+                            <a href="products.html?package=starter" class="btn btn-outline-primary">View Starter Pack</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <span class="badge bg-success mb-3">Popular</span>
+                            <h5 class="fw-bold mb-2">Family Bundle</h5>
+                            <p class="text-muted mb-3">Savings on top picks for families</p>
+                            <a href="products.html?package=family" class="btn btn-outline-success">Shop Family Bundle</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <span class="badge bg-warning mb-3">Premium</span>
+                            <h5 class="fw-bold mb-2">Premium Set</h5>
+                            <p class="text-muted mb-3">Exclusive premium collection</p>
+                            <a href="products.html?package=premium" class="btn btn-outline-warning">Explore Premium Set</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- M. Features Section - Trust Signals -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">Shop With Confidence</h2>
+                    <div class="d-flex mb-4">
+                        <div class="me-4">
+                            <i class="fas fa-check-circle fa-2x text-success mb-2"></i>
+                            <h5>Quality Guarantee</h5>
+                            <p class="text-muted small">All products verified</p>
+                        </div>
+                        <div class="me-4">
+                            <i class="fas fa-lock fa-2x text-primary mb-2"></i>
+                            <h5>Secure Payments</h5>
+                            <p class="text-muted small">256-bit encryption</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-headset fa-2x text-info mb-2"></i>
+                            <h5>24/7 Support</h5>
+                            <p class="text-muted small">Always here to help</p>
+                        </div>
+                    </div>
+                    <a href="guarantee.html" class="btn btn-dark">Learn About Our Guarantee</a>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="bg-light p-4 rounded">
+                        <h5 class="mb-3">Join 500,000+ Happy Customers</h5>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <span>4.9/5 from 12,345 reviews</span>
+                        </div>
+                        <div class="progress mb-4" style="height: 10px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 95%"></div>
+                        </div>
+                        <p>"The customer service was exceptional! My order arrived faster than expected."</p>
+                        <small>- Michael T., Verified Buyer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Get Exclusive Deals!</h2>
+                    <p class="mb-4">Subscribe to our newsletter for special offers and new product alerts</p>
+                    
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <p class="mt-3 small text-white-50">We respect your privacy. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="trendy-footer">
+        <!-- ... (keep existing footer) ... -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Countdown timer for deals
+        function startCountdown() {
+            let countdownTime = 15 * 60; // 15 minutes in seconds
+            const countdownElement = document.getElementById('dealCountdown');
+            
+            const timer = setInterval(() => {
+                const minutes = Math.floor(countdownTime / 60);
+                const seconds = countdownTime % 60;
+                
+                countdownElement.textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (countdownTime <= 0) {
+                    clearInterval(timer);
+                    countdownElement.textContent = "EXPIRED!";
+                } else {
+                    countdownTime--;
+                }
+            }, 1000);
+        }
+        
+        // Summer sale countdown (24 hours)
+        function startSummerCountdown() {
+            let countdownTime = 24 * 60 * 60; // 24 hours in seconds
+            const countdownElement = document.getElementById('summerCountdown');
+            
+            const timer = setInterval(() => {
+                const hours = Math.floor(countdownTime / 3600);
+                const minutes = Math.floor((countdownTime % 3600) / 60);
+                const seconds = countdownTime % 60;
+                
+                countdownElement.textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (countdownTime <= 0) {
+                    clearInterval(timer);
+                    countdownElement.textContent = "SALE ENDED!";
+                } else {
+                    countdownTime--;
+                }
+            }, 1000);
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            startSummerCountdown();
+            updateModexTime();
+        });
+        
+        // Existing time function
+        function updateModexTime() {
+            const el = document.getElementById('modexCurrentTime');
+            if (!el) return;
+            const now = new Date();
+            el.textContent = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        }
+        setInterval(updateModexTime, 1000);
+    </script>
+</body>
+</html>

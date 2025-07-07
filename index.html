@@ -17,7 +17,8 @@
 
 <body>
     <!-- A. Top navigation bar -->
-    <div style="background-color: rgb(29, 32, 32);" class="modex-manage-nav d-flex align-items-center justify-content-between px-2 px-md-3 py-1 flex-wrap">
+
+    <div class="modex-manage-nav modex-manage-nav-custom d-flex align-items-center justify-content-between px-2 px-md-3 py-1 flex-wrap">
         <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
             <!-- Account -->
             <a href="login.html" class="manage-nav-link d-flex align-items-center">
@@ -33,19 +34,19 @@
             <a href="cart.html" class="manage-nav-link d-flex align-items-center position-relative">
                 <i class="fas fa-shopping-cart me-1"></i>
                 <span class="d-none d-sm-inline">Cart</span>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="manageNavCartCount" style="font-size:0.75rem;">0</span>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="manageNavCartCount">0</span>
             </a>
         </div>
         <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap mt-1 mt-md-0">
             <!-- Location -->
-            <span class="manage-nav-location d-flex align-items-center">
+            <span class="manage-nav-location d-flex align-items-center" style="cursor:pointer; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='rgba(255,224,102,0.35)'; this.style.color='#ff6f61';" onmouseout="this.style.background='rgba(255,224,102,0.13)'; this.style.color='';">
                 <i class="fas fa-map-marker-alt me-1 text-danger"></i>
                 <span class="d-none d-sm-inline text-white">Your Location</span>
             </span>
             <!-- Time -->
-            <span class="manage-nav-time d-flex align-items-center">
+            <span class="manage-nav-time d-flex align-items-center" style="cursor:pointer; transition: background 0.2s, color 0.2s;" onmouseover="this.style.background='rgba(255,224,102,0.35)'; this.style.color='#0d6efd';" onmouseout="this.style.background='rgba(255,224,102,0.13)'; this.style.color='';">
                 <i class="fas fa-clock me-1 text-primary"></i>
-                <span id="modexCurrentTime" style="color: rgb(211, 169, 92);"></span>
+                <span id="modexCurrentTime"></span>
             </span>
         </div>
     </div>
@@ -53,10 +54,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark modex-navbar">
         <div class="container-fluid px-4">
             <!-- Logo -->
-            <a class="navbar-brand d-flex align-items-center modex-navbar-brand" href="index.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Modex Logo" width="40" class="me-2 modex-navbar-logo">
-                <span class="modex-navbar-brand-text">Modex</span>
+            <a class="navbar-brand d-flex align-items-center modex-navbar-brand modex-navbar-brand-hover" href="index.html" style="transition: box-shadow 0.3s, transform 0.3s;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Modex Logo" width="40" class="me-2 modex-navbar-logo" style="transition: transform 0.3s;">
+                <span class="modex-navbar-brand-text" style="transition: color 0.3s;">Modex</span>
             </a>
+
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#modexNavbar" aria-controls="modexNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -79,12 +81,16 @@
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
+                    
                 </form>
                 <form class="d-flex align-items-center mx-sm-4 modex-lang-form">
-                    <select class="form-select modex-navbar-lang-select trendy-lang-select" aria-label="Language select">
+                    <select class="form-select modex-navbar-lang-select trendy-lang-select lang-hover-effect" aria-label="Language select" style="transition: box-shadow 0.2s, border-color 0.2s;">
                         <option value="ar">🇪🇬 العربية</option>
                         <option value="en" selected>🇺🇸 English</option>
                     </select>
+                    <style>
+
+                    </style>
                 </form>
             </form>
                 <!-- Account, Orders, Cart -->
@@ -92,12 +98,14 @@
                 <!-- Offer Banner Start -->
                 <li class="nav-item ms-lg-3">
                     <div class="d-flex align-items-center">
-                        <span class="badge bg-warning text-dark px-3 py-2 fw-bold modex-offer-badge">
+                        <span class="badge bg-warning text-dark px-3 py-2 fw-bold modex-offer-badge offer-hover-effect" style="cursor:pointer; transition: background 0.2s, color 0.2s, box-shadow 0.2s;">
                             <i class="fas fa-bolt me-2"></i>
                             Limited Time Offer: Up to 50% OFF!
-                            <a href="products.html?cat=deals" class="text-decoration-underline text-dark ms-2 fw-semibold modex-offer-badge-link">Shop Now</a>
+                            <a href="products.html?cat=deals" class="text-decoration-underline text-dark ms-2 fw-semibold modex-offer-badge-link offer-hover-link" style="transition: color 0.2s;">Shop Now</a>
                         </span>
                     </div>
+                    <style>
+                    </style>
                 </li>
                 <!-- Offer Banner End -->
                 </ul>
@@ -112,19 +120,48 @@
             </button>
             <div  class="collapse  navbar-collapse" id="modexSubnav">
                 <ul  class="navbar-nav  me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=deals"><i class="fas fa-bolt me-1"></i>Today's Deals</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=electronics">Electronics</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=fashion">Fashion</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=home">Home & Living</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=beauty">Beauty</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=sports">Sports</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=brands">Brands</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="products.html?cat=giftcards">Gift Cards</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=deals">
+                            <i class="fas fa-bolt me-1"></i>Today's Deals
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=electronics">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=fashion">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=home">Home & Living</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=beauty">Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=sports">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=brands">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-subnav-link" href="products.html?cat=giftcards">Gift Cards</a>
+                    </li>
+                </ul>
+
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link text-black" href="help.html"><i class="fas fa-question-circle me-1"></i>Help</a></li>
-                    <li class="nav-item"><a class="nav-link text-black" href="sell.html"><i class="fas fa-store me-1"></i>Sell on Modex</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-hover-link" href="help.html">
+                            <i class="fas fa-question-circle me-1"></i>Help
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black modex-hover-link" href="sell.html">
+                            <i class="fas fa-store me-1"></i>Sell on Modex
+                        </a>
+                    </li>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -154,8 +191,15 @@
         <div class="container">
             <h2 class="text-center mb-5">Featured Categories</h2>
             <div class="row g-4" id="featuredCategories">
-                <!-- Categories will be loaded dynamically -->
-            </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <a href="products.html?category=${encodeURIComponent(category)}" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-${getCategoryIcon(category)}"></i>
+                        </div>
+                        <h5>sdfafsf</h5>
+                    </a>
+                </div>
+                </div>
         </div>
     </section>
     <!-- F. Advertisement Banner (Summer Sale) -->
@@ -178,15 +222,50 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="btn-group" role="group">
-                        <button class="btn btn-outline-primary active" data-filter="all">All</button>
-                        <button class="btn btn-outline-primary" data-filter="trending">Trending</button>
-                        <button class="btn btn-outline-primary" data-filter="sale">On Sale</button>
+                        <button class="btn btn-outline-secondary active" data-filter="all">All</button>
+                        <button class="btn btn-outline-secondary" data-filter="trending">Trending</button>
+                        <button class="btn btn-outline-secondary" data-filter="sale">On Sale</button>
                     </div>
                 </div>
             </div>
             <div class="row g-4" id="featuredProducts">
-                <!-- Products will be loaded dynamically -->
-            </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card product-card h-100" data-product-id="${product.id}" data-trending="${product.trending}" data-sale="${product.sale}">
+                        ${badges.join('')}
+                        <button class="wishlist-btn" title="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="product-image-placeholder">
+                            <i class="fas fa-image fa-2x text-muted"></i>
+                            <p class="text-muted mt-2 mb-0">Product Image</p>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-2">
+                                <span class="badge bg-light text-dark small">${escapeHtml(product.brand)}</span>
+                            </div>
+                            <h6 class="card-title">
+                                <a href="product-detail.html?id=${product.id}" class="text-decoration-none text-dark">
+                                    ${escapeHtml(product.name)}
+                                </a>
+                            </h6>
+                            <p class="card-text text-muted small">${escapeHtml(product.category)}</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        ${salePrice}
+                                        <span class="h6 text-primary mb-0">$${product.price.toFixed(2)}</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-sm w-100 btn-add-to-cart" 
+                                        data-product-id="${product.id}"
+                                        onclick="addToCartFromCard(${product.id})">
+                                    <i class="fas fa-shopping-cart me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
             <div class="text-center mt-4">
                 <a href="products.html" class="btn btn-primary btn-lg">View All Products</a>
             </div>
@@ -202,6 +281,7 @@
             </div>
             <a href="collections.html" class="btn btn-warning btn-lg fw-semibold mt-3 mt-md-0 shadow">Browse All <i class="fas fa-arrow-right ms-2"></i></a>
         </div>
+        
         <div class="row g-4">
             <!-- Collection Card 1 -->
             <div class="col-12 col-sm-6 col-lg-3">
@@ -223,8 +303,11 @@
                 <img src="assets/collections/fashion.png" alt="Trending Fashion" class="img-fluid rounded-top-4">
                 <span class="cool-collection-badge">Ad</span>
                 </div>
+                
                 <div class="p-3">
+                    
                 <h5 class="fw-bold mb-1">Trending Fashion</h5>
+                
                 <p class="text-muted small mb-2">Fresh looks, top brands, and exclusive styles for you.</p>
                 <a href="collections.html?col=trending-fashion" class="btn btn-outline-danger btn-sm fw-semibold">Shop Now</a>
                 </div>
@@ -294,6 +377,68 @@
         <!-- Repeat for other collections... -->
         </div>
     </section>
+    <div class="container my-4">
+        <div class="row align-items-center justify-content-between bg-warning rounded-4 p-4 shadow-sm" style="background: linear-gradient(90deg, #fffbe6 0%, #ffe066 100%);">
+            <div class="col-md-8">
+                <h2 class="fw-bold mb-2" style="color: #FF5CA8;">
+                    <i class="fas fa-bolt me-2 text-danger"></i> Flash Offers!
+                </h2>
+                <p class="mb-0 lead text-dark">
+                    Limited-time deals on top products. Grab your favorites before they're gone!
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <a href="products.html?cat=deals" class="btn btn-purple btn-lg px-4 shadow pulse">
+                    Shop Flash Deals <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Example offer cards row (can be dynamically generated) -->
+        <div class="row mt-4 g-3" id="flashOffersRow">
+            <div class="col-6 col-md-3">
+                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
+                    <img src="images/offer1.jpg" class="card-img-top" alt="Offer 1">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Wireless Earbuds</h5>
+                        <p class="card-text text-danger fw-bold mb-2">Now $29 <span class="text-muted text-decoration-line-through fs-6">$59</span></p>
+                        <a href="product.html?id=101" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
+                    <img src="images/offer2.jpg" class="card-img-top" alt="Offer 2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Smart Watch</h5>
+                        <p class="card-text text-danger fw-bold mb-2">Now $49 <span class="text-muted text-decoration-line-through fs-6">$99</span></p>
+                        <a href="product.html?id=102" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-none d-md-block">
+                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
+                    <img src="images/offer3.jpg" class="card-img-top" alt="Offer 3">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Fashion Sneakers</h5>
+                        <p class="card-text text-danger fw-bold mb-2">Now $39 <span class="text-muted text-decoration-line-through fs-6">$79</span></p>
+                        <a href="product.html?id=103" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-none d-md-block">
+                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
+                    <img src="images/offer4.jpg" class="card-img-top" alt="Offer 4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Home Blender</h5>
+                        <p class="card-text text-danger fw-bold mb-2">Now $24 <span class="text-muted text-decoration-line-through fs-6">$49</span></p>
+                        <a href="product.html?id=104" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- J. More Reasons to Shop -->
     <section class="py-5">
         <div class="container">
@@ -642,8 +787,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
-    <script src="js/cart.js"></script>
     <script src="js/products.js"></script>
     <script src="js/search.js"></script>
     <script>

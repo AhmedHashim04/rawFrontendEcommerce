@@ -102,8 +102,49 @@
                     </div>
                     <div class="card-body p-0">
                         <div id="cartItemsContainer">
-                            <!-- Cart items will be loaded dynamically -->
-                        </div>
+                            <div class="cart-item p-3 border-bottom" data-item-id="${item.id}">
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <div class="product-image-placeholder-sm">
+                                            <i class="fas fa-image text-muted"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="mb-1">${this.escapeHtml(item.name)}</h6>
+                                        <small class="text-muted">Category: ${this.escapeHtml(item.category)}</small>
+                                        <div class="mt-1">
+                                            <span class="badge bg-light text-dark">$${item.price.toFixed(2)} each</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <span class="fw-bold text-primary">$${(item.price * item.quantity).toFixed(2)}</span>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="input-group input-group-sm">
+                                            <button class="btn btn-outline-secondary quantity-decrease" 
+                                                    type="button" data-item-id="${item.id}"
+                                                    ${item.quantity <= 1 ? 'disabled' : ''}>
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <input type="number" class="form-control text-center quantity-input" 
+                                                   value="${item.quantity}" min="1" max="10" 
+                                                   data-item-id="${item.id}">
+                                            <button class="btn btn-outline-secondary quantity-increase" 
+                                                    type="button" data-item-id="${item.id}"
+                                                    ${item.quantity >= 10 ? 'disabled' : ''}>
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 text-end">
+                                        <button class="btn btn-outline-danger btn-sm remove-item" 
+                                                data-item-id="${item.id}" title="Remove item">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
                     </div>
                 </div>
             </div>
