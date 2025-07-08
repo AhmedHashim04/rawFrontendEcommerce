@@ -16,8 +16,8 @@
 </head>
 
 <body>
-    <!-- A. Top navigation bar -->
 
+    <!-- A. Top navigation bar -->
     <div class="modex-manage-nav modex-manage-nav-custom d-flex align-items-center justify-content-between px-2 px-md-3 py-1 flex-wrap">
         <div class="d-flex align-items-center gap-2 gap-md-3 flex-wrap">
             <!-- Account -->
@@ -165,447 +165,614 @@
             </div>
         </div>
     </nav>
-    <!-- D. Hero Section (moved up) -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
-                    <h1 class="display-4 fw-bold mb-3">Welcome to Modex</h1>
-                    <p class="lead mb-4">Your ultimate trading hub for premium products, exclusive deals, and authentic marketplace experiences. Trade smart, shop smarter.</p>
-                    <div class="hero-buttons">
-                        <a href="products.html" class="btn btn-primary btn-lg me-3">Shop Now</a>
-                        <a href="#featured-products" class="btn btn-outline-light btn-lg">View Deals</a>
+    <section class="latest-offers-hero py-5" style="width:100vw; min-height:340px; background: linear-gradient(120deg, #f8fafc 60%, #e6f0ff 100%); position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; overflow:hidden;">
+        <div class="container-fluid px-0" style="max-width: 100vw;">
+            <div class="row g-4 justify-content-center align-items-center">
+                <!-- العرض الأول -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="offer-banner-card position-relative w-100 h-100 shadow-lg rounded-4 overflow-hidden" style="min-height: 320px; background: linear-gradient(135deg, #fffbe6 60%, #ffe6fa 100%);">
+                        <img src="images/offer1.jpg" alt="عرض خاص 1" class="w-100 h-100" style="object-fit:cover; min-height: 320px; opacity:0.92;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4" style="background: linear-gradient(0deg, rgba(0,0,0,0.38) 60%, rgba(0,0,0,0.08) 100%);">
+                            <h2 class="text-white fw-bold mb-2" style="font-size:2rem;">أحدث العروض 🔥</h2>
+                            <p class="text-white-50 mb-3" style="font-size:1.1rem;">خصومات تصل حتى 50% على الإلكترونيات</p>
+                            <a href="products.html?cat=deals" class="btn btn-warning rounded-pill px-4 fw-bold" style="letter-spacing:0.5px;">تسوق العرض</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-image text-center">
-                        <i class="fas fa-shopping-cart hero-icon float"></i>
+                <!-- العرض الثاني -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="offer-banner-card position-relative w-100 h-100 shadow-lg rounded-4 overflow-hidden" style="min-height: 320px; background: linear-gradient(135deg, #e6fff9 60%, #e0e7ff 100%);">
+                        <img src="images/offer2.jpg" alt="عرض خاص 2" class="w-100 h-100" style="object-fit:cover; min-height: 320px; opacity:0.92;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4" style="background: linear-gradient(0deg, rgba(0,0,0,0.32) 60%, rgba(0,0,0,0.06) 100%);">
+                            <h2 class="text-white fw-bold mb-2" style="font-size:2rem;">موضة الصيف ☀️</h2>
+                            <p class="text-white-50 mb-3" style="font-size:1.1rem;">تسوق تشكيلات جديدة بأسعار مميزة</p>
+                            <a href="products.html?cat=fashion" class="btn btn-primary rounded-pill px-4 fw-bold" style="letter-spacing:0.5px;">اكتشف الآن</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- العرض الثالث (اختياري) -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex d-none d-lg-flex">
+                    <div class="offer-banner-card position-relative w-100 h-100 shadow-lg rounded-4 overflow-hidden" style="min-height: 320px; background: linear-gradient(135deg, #ffe6fa 60%, #e0ffe6 100%);">
+                        <img src="images/offer3.jpg" alt="عرض خاص 3" class="w-100 h-100" style="object-fit:cover; min-height: 320px; opacity:0.92;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-4" style="background: linear-gradient(0deg, rgba(0,0,0,0.28) 60%, rgba(0,0,0,0.04) 100%);">
+                            <h2 class="text-white fw-bold mb-2" style="font-size:2rem;">عروض المنزل والديكور 🏡</h2>
+                            <p class="text-white-50 mb-3" style="font-size:1.1rem;">جدد منزلك بأقل الأسعار</p>
+                            <a href="products.html?cat=home" class="btn btn-success rounded-pill px-4 fw-bold" style="letter-spacing:0.5px;">تسوق الآن</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container"></div>
         </div>
     </section>
-    <!-- E. Featured Categories -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Categories</h2>
-            <div class="row g-4" id="featuredCategories">
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                    <a href="products.html?category=${encodeURIComponent(category)}" class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-${getCategoryIcon(category)}"></i>
+    <section class="big-product-collage my-5">
+        <div class="container-fluid px-0">
+            <div class="row g-0 justify-content-center align-items-stretch" style="min-height: 380px;">
+                <!-- Main Large Image -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="h-100 w-100 position-relative">
+                        <img src="images/featured1.jpg" alt="Luxury Sofa" class="w-100 h-100 object-fit-cover rounded-start-4" style="min-height: 380px; max-height: 420px; object-fit:cover;">
+                        <div class="position-absolute bottom-0 start-0 p-4" style="background:rgba(0,0,0,0.22); border-radius:0 1.5rem 0 0;">
+                            <h3 class="text-white fw-bold mb-1" style="font-size:2rem;">كنبة فاخرة</h3>
+                            <span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-pill shadow">خصم 30%</span>
                         </div>
-                        <h5>sdfafsf</h5>
+                    </div>
+                </div>
+                <!-- Right Collage -->
+                <div class="col-12 col-md-6 col-lg-7">
+                    <div class="row g-0 h-100">
+                        <div class="col-6 col-lg-4">
+                            <div class="h-100 position-relative">
+                                <img src="images/featured2.jpg" alt="Modern Lamp" class="w-100 h-100 object-fit-cover" style="min-height: 190px; max-height: 210px; object-fit:cover;">
+                                <div class="position-absolute bottom-0 start-0 p-2" style="background:rgba(255,255,255,0.7); border-radius:0 0 1rem 0;">
+                                    <span class="fw-bold text-dark">مصباح عصري</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="h-100 position-relative">
+                                <img src="images/featured3.jpg" alt="Decor Vase" class="w-100 h-100 object-fit-cover" style="min-height: 190px; max-height: 210px; object-fit:cover;">
+                                <div class="position-absolute top-0 end-0 p-2" style="background:rgba(255,255,255,0.7); border-radius:0 1rem 0 0;">
+                                    <span class="fw-bold text-dark">مزهرية ديكور</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 d-none d-lg-block">
+                            <div class="h-100 position-relative">
+                                <img src="images/featured4.jpg" alt="Artistic Clock" class="w-100 h-100 object-fit-cover rounded-end-4" style="min-height: 380px; max-height: 420px; object-fit:cover;">
+                                <div class="position-absolute bottom-0 end-0 p-3" style="background:rgba(0,0,0,0.18); border-radius:1rem 0 1rem 0;">
+                                    <span class="fw-bold text-white">ساعة فنية</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom row for md screens -->
+                        <div class="col-6 d-lg-none">
+                            <div class="h-100 position-relative">
+                                <img src="images/featured5.jpg" alt="Elegant Table" class="w-100 h-100 object-fit-cover rounded-bottom-4" style="min-height: 190px; max-height: 210px; object-fit:cover;">
+                                <div class="position-absolute bottom-0 start-0 p-2" style="background:rgba(0,0,0,0.13); border-radius:0 0 1rem 0;">
+                                    <span class="fw-bold text-white">طاولة أنيقة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 d-lg-none">
+                            <div class="h-100 position-relative">
+                                <img src="images/featured6.jpg" alt="Wall Art" class="w-100 h-100 object-fit-cover rounded-bottom-4" style="min-height: 190px; max-height: 210px; object-fit:cover;">
+                                <div class="position-absolute top-0 end-0 p-2" style="background:rgba(255,255,255,0.7); border-radius:0 1rem 0 0;">
+                                    <span class="fw-bold text-dark">لوحة جدارية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" id="lots-of-products" style="background:hsl(var(---color)); position:relative;">
+        <div class="container-fluid px-0">
+            <h2 class="mb-4 text-center fw-bold" style="font-size:2.2rem;">Discover Top Picks for You</h2>
+            <div class="position-relative">
+                <!-- Left Arrow -->
+                <button id="products-scroll-left" class="products-scroll-arrow btn btn-light shadow position-absolute top-50 start-0 translate-middle-y z-2 d-none d-md-flex align-items-center justify-content-center" style="width:54px; height:54px; border-radius:50%; font-size:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.18); border:2px solid #eee; transition:background 0.2s, color 0.2s, box-shadow 0.2s;" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <!-- Right Arrow -->
+                <button id="products-scroll-right" class="products-scroll-arrow btn btn-light shadow position-absolute top-50 end-0 translate-middle-y z-2 d-none d-md-flex align-items-center justify-content-center" style="width:54px; height:54px; border-radius:50%; font-size:2rem; box-shadow:0 2px 12px rgba(0,0,0,0.18); border:2px solid #eee; transition:background 0.2s, color 0.2s, box-shadow 0.2s;" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="row gx-3 gy-4 flex-nowrap overflow-auto" style="white-space:nowrap; scroll-behavior:smooth;">
+                    <div class="col-12">
+                        <div id="products-scroll-row" class="d-flex flex-row flex-nowrap justify-content-start align-items-stretch" style="gap: 24px; overflow-x: auto; padding-bottom: 8px;">
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product1.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Bluetooth Headphones">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Bluetooth Headphones</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$39.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product2.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Smartphone Stand">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Smartphone Stand</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$12.49</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product3.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Fitness Tracker">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Fitness Tracker</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$29.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product4.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Wireless Mouse">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Wireless Mouse</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$15.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product5.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Travel Mug">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Travel Mug</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$9.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product6.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Portable Speaker">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Portable Speaker</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$24.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product7.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="LED Desk Lamp">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">LED Desk Lamp</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$18.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product8.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="USB Flash Drive">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">USB Flash Drive</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$7.49</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product9.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Wireless Charger">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Wireless Charger</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$21.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product10.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Eco Water Bottle">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Eco Water Bottle</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$11.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product11.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Mini Backpack">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Mini Backpack</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$27.99</p>
+                                </div>
+                            </div>
+                            <div class="product-showcase-card shadow-sm border-0" style="min-width: 260px; max-width: 260px; background: #f8f9fa; border-radius: 18px;">
+                                <img src="images/product12.jpg" class="w-100 d-block" style="height: 240px; object-fit:cover; border-radius: 18px 18px 0 0;" alt="Scented Candle">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-semibold">Scented Candle</h6>
+                                    <p class="mb-0 text-primary fw-bold" style="font-size:1.1rem;">$8.99</p>
+                                </div>
+                            </div>
+                            <!-- Add more product cards as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 top-picks-section" id="top-picks">
+        <div class="container-fluid px-0">
+            <h2 class="mb-4 text-center fw-bold top-picks-title">
+                <span class="top-picks-title-gradient">Discover Top Picks for You</span>
+            </h2>
+            <div class="position-relative">
+                <!-- Left Arrow -->
+                <button id="top-picks-scroll-left" class="top-picks-arrow left btn shadow position-absolute top-50 start-0 translate-middle-y z-2 d-none d-md-flex"
+                    aria-label="Scroll left">
+                    <i class="fas fa-circle-chevron-left"></i>
+                </button>
+                <button id="top-picks-scroll-right" class="top-picks-arrow right btn shadow position-absolute top-50 end-0 translate-middle-y z-2 d-none d-md-flex"
+                    aria-label="Scroll right">
+                    <i class="fas fa-circle-chevron-right"></i>
+                </button>
+
+                </button>
+                <div class="row gx-3 gy-4 flex-nowrap overflow-auto top-picks-row">
+                    <div class="col-12">
+                        <div id="top-picks-scroll-row" class="d-flex flex-row flex-nowrap justify-content-start align-items-stretch top-picks-scroll-row">
+                            <!-- Product Card 1 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg1">
+                                <img src="images/product1.jpg" class="w-100 d-block product-img" alt="Bluetooth Headphones">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Bluetooth Headphones</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$39.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 2 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg2">
+                                <img src="images/product2.jpg" class="w-100 d-block product-img" alt="Smartphone Stand">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Smartphone Stand</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$12.49</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 3 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg3">
+                                <img src="images/product3.jpg" class="w-100 d-block product-img" alt="Fitness Tracker">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Fitness Tracker</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$29.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 4 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg4">
+                                <img src="images/product4.jpg" class="w-100 d-block product-img" alt="Wireless Mouse">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Wireless Mouse</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$15.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 5 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg1">
+                                <img src="images/product5.jpg" class="w-100 d-block product-img" alt="Travel Mug">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Travel Mug</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$9.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 6 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg2">
+                                <img src="images/product6.jpg" class="w-100 d-block product-img" alt="Portable Speaker">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Portable Speaker</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$24.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 7 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg3">
+                                <img src="images/product7.jpg" class="w-100 d-block product-img" alt="LED Desk Lamp">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">LED Desk Lamp</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$18.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 8 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg4">
+                                <img src="images/product8.jpg" class="w-100 d-block product-img" alt="USB Flash Drive">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">USB Flash Drive</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$7.49</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 9 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg1">
+                                <img src="images/product9.jpg" class="w-100 d-block product-img" alt="Wireless Charger">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Wireless Charger</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$21.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 10 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg2">
+                                <img src="images/product10.jpg" class="w-100 d-block product-img" alt="Eco Water Bottle">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Eco Water Bottle</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$11.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 11 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg3">
+                                <img src="images/product11.jpg" class="w-100 d-block product-img" alt="Mini Backpack">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Mini Backpack</h6>
+                                    <p class="mb-0 fw-bold product-price blue">$27.99</p>
+                                </div>
+                            </div>
+                            <!-- Product Card 12 -->
+                            <div class="product-showcase-card border-0 shadow-lg bg4">
+                                <img src="images/product12.jpg" class="w-100 d-block product-img" alt="Scented Candle">
+                                <div class="p-3">
+                                    <h6 class="mb-1 fw-bold product-title">Scented Candle</h6>
+                                    <p class="mb-0 fw-bold product-price pink">$8.99</p>
+                                </div>
+                            </div>
+                            <!-- Add more product cards as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تصنيفات جذابة للزوار -->
+    <section class="attractive-categories-section py-5" style="width:100vw; min-height:420px; background: #f8fafc; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+        <div class="container-fluid px-0" style="max-width: 100vw;">
+            <h2 class="fw-bold text-center mb-4" style="letter-spacing:1px;">✨ اكتشف تصنيفاتنا المميزة</h2>
+            <div class="row g-4 justify-content-center mx-0">
+                <!-- تصنيف الإلكترونيات -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=electronics" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #e0e7ff 0%, #fffbe6 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                        </div>
+                        <div class="fw-semibold fs-5 mb-1">إلكترونيات</div>
+                        <div class="text-muted small">أحدث الأجهزة والتقنيات</div>
                     </a>
                 </div>
-                </div>
-        </div>
-    </section>
-    <!-- F. Advertisement Banner (Summer Sale) -->
-    <div class="container">
-        <div class="ad-banner">
-            <div class="ad-banner-content">
-                <h3 class="h2 mb-3">🎉 Summer Sale - Up to 50% Off!</h3>
-                <p class="lead mb-4">Limited time offer on electronics, fashion, and more. Don't miss out!</p>
-                <a href="products.html?sale=true" class="btn btn-light btn-lg">Shop Sale Items</a>
-            </div>
-        </div>
-    </div>
-    <!-- G. Featured Products -->
-    <section class="py-5 bg-light" id="featured-products">
-        <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <h2 class="mb-0">Trending Products</h2>
-                    <p class="text-muted">Discover what's popular right now</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="btn-group" role="group">
-                        <button class="btn btn-outline-secondary active" data-filter="all">All</button>
-                        <button class="btn btn-outline-secondary" data-filter="trending">Trending</button>
-                        <button class="btn btn-outline-secondary" data-filter="sale">On Sale</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4" id="featuredProducts">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card product-card h-100" data-product-id="${product.id}" data-trending="${product.trending}" data-sale="${product.sale}">
-                        ${badges.join('')}
-                        <button class="wishlist-btn" title="Add to Wishlist">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <div class="product-image-placeholder">
-                            <i class="fas fa-image fa-2x text-muted"></i>
-                            <p class="text-muted mt-2 mb-0">Product Image</p>
+                <!-- تصنيف الموضة -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=fashion" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #ffe0f0 0%, #e6fff7 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-tshirt fa-2x text-danger"></i>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <div class="mb-2">
-                                <span class="badge bg-light text-dark small">${escapeHtml(product.brand)}</span>
-                            </div>
-                            <h6 class="card-title">
-                                <a href="product-detail.html?id=${product.id}" class="text-decoration-none text-dark">
-                                    ${escapeHtml(product.name)}
-                                </a>
-                            </h6>
-                            <p class="card-text text-muted small">${escapeHtml(product.category)}</p>
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <div>
-                                        ${salePrice}
-                                        <span class="h6 text-primary mb-0">$${product.price.toFixed(2)}</span>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary btn-sm w-100 btn-add-to-cart" 
-                                        data-product-id="${product.id}"
-                                        onclick="addToCartFromCard(${product.id})">
-                                    <i class="fas fa-shopping-cart me-1"></i>Add to Cart
-                                </button>
-                            </div>
+                        <div class="fw-semibold fs-5 mb-1">موضة</div>
+                        <div class="text-muted small">أحدث صيحات الملابس</div>
+                    </a>
+                </div>
+                <!-- تصنيف المنزل والديكور -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=home" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #e0ffe6 0%, #e6f0ff 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-couch fa-2x text-success"></i>
                         </div>
-                    </div>
+                        <div class="fw-semibold fs-5 mb-1">منزل وديكور</div>
+                        <div class="text-muted small">كل ما تحتاجه لمنزلك</div>
+                    </a>
                 </div>
-                    </div>
-            <div class="text-center mt-4">
-                <a href="products.html" class="btn btn-primary btn-lg">View All Products</a>
+                <!-- تصنيف الرياضة -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=sports" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #fff0e0 0%, #e0f7ff 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-football-ball fa-2x text-warning"></i>
+                        </div>
+                        <div class="fw-semibold fs-5 mb-1">رياضة</div>
+                        <div class="text-muted small">معدات وأزياء رياضية</div>
+                    </a>
+                </div>
+                <!-- تصنيف الجمال والعناية -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=beauty" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #ffe6fa 0%, #e6fff9 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-magic fa-2x text-pink"></i>
+                        </div>
+                        <div class="fw-semibold fs-5 mb-1">جمال وعناية</div>
+                        <div class="text-muted small">منتجات العناية الشخصية</div>
+                    </a>
+                </div>
+                <!-- تصنيف الأطفال والألعاب -->
+                <div class="col-6 col-sm-4 col-md-2 d-flex">
+                    <a href="products.html?cat=kids" class="category-card d-block text-center p-4 shadow-sm rounded-4 w-100 text-decoration-none hover-shadow" style="background: linear-gradient(135deg, #e0f7fa 0%, #fffbe6 100%); transition: transform 0.2s; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="mb-2">
+                            <i class="fas fa-baby fa-2x text-info"></i>
+                        </div>
+                        <div class="fw-semibold fs-5 mb-1">أطفال وألعاب</div>
+                        <div class="text-muted small">كل ما يخص الأطفال</div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-    <!-- H. Cool Collections Banner and Cards -->
-    <section class="cool-collections-section py-5">
-        <div class="container">
-        <div class="cool-collections-banner mb-4 p-4 rounded-4 d-flex flex-column flex-md-row align-items-center justify-content-between">
-            <div>
-            <h2 class="fw-bold mb-2 text-white">🔥 Cool Collections</h2>
-            <p class="mb-0 text-white-50">Discover handpicked collections and exclusive deals, just for you!</p>
-            </div>
-            <a href="collections.html" class="btn btn-warning btn-lg fw-semibold mt-3 mt-md-0 shadow">Browse All <i class="fas fa-arrow-right ms-2"></i></a>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Collection Card 1 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0">
-                <div class="cool-collection-img-wrapper">
-                <img src="assets/collections/gadgets.png" alt="Smart Gadgets" class="img-fluid rounded-top-4">
-                </div>
-                <div class="p-3">
-                <h5 class="fw-bold mb-1">Smart Gadgets</h5>
-                <p class="text-muted small mb-2">Latest tech & trending electronics for your lifestyle.</p>
-                <a href="collections.html?col=smart-gadgets" class="btn btn-outline-primary btn-sm fw-semibold">Shop Now</a>
-                </div>
-            </div>
-            </div>
-            <!-- Collection Card 2 (Ad style) -->
-            <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0 cool-collection-ad">
-                <div class="cool-collection-img-wrapper position-relative">
-                <img src="assets/collections/fashion.png" alt="Trending Fashion" class="img-fluid rounded-top-4">
-                <span class="cool-collection-badge">Ad</span>
-                </div>
-                
-                <div class="p-3">
-                    
-                <h5 class="fw-bold mb-1">Trending Fashion</h5>
-                
-                <p class="text-muted small mb-2">Fresh looks, top brands, and exclusive styles for you.</p>
-                <a href="collections.html?col=trending-fashion" class="btn btn-outline-danger btn-sm fw-semibold">Shop Now</a>
-                </div>
-            </div>
-            </div>
-            <!-- Collection Card 3 -->
-            <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0">
-                <div class="cool-collection-img-wrapper">
-                <img src="assets/collections/home.png" alt="Home Essentials" class="img-fluid rounded-top-4">
-                </div>
-                <div class="p-3">
-                <h5 class="fw-bold mb-1">Home Essentials</h5>
-                <p class="text-muted small mb-2">Upgrade your space with must-have home & living picks.</p>
-                <a href="collections.html?col=home-essentials" class="btn btn-outline-success btn-sm fw-semibold">Shop Now</a>
-                </div>
-            </div>
-            </div>
-            <!-- Collection Card 4 (Ad style) -->
-            <div class="col-12 col-sm-6 col-lg-3">
-            <div class="cool-collection-card shadow-sm rounded-4 h-100 p-0 cool-collection-ad">
-                <div class="cool-collection-img-wrapper position-relative">
-                <img src="assets/collections/beauty.png" alt="Beauty & Self-Care" class="img-fluid rounded-top-4">
-                <span class="cool-collection-badge">Ad</span>
-                </div>
-                <div class="p-3">
-                <h5 class="fw-bold mb-1">Beauty &amp; Self-Care</h5>
-                <p class="text-muted small mb-2">Glow up with top beauty, skincare, and wellness picks.</p>
-                <a href="collections.html?col=beauty" class="btn btn-outline-warning btn-sm fw-semibold">Shop Now</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- I. Collections Showcase -->
-    <section class="collections-showcase-section py-5">
-        <div class="container">
-        <!-- Collection 1 -->
-        <div class="collection-showcase mb-5">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-            <h4 class="fw-bold mb-0">Smart Gadgets</h4>
-            <a href="collections.html?col=smart-gadgets" class="btn btn-link fw-semibold">View All</a>
-            </div>
-            <div class="collection-products-scroll d-flex flex-nowrap gap-3 overflow-auto pb-2">
-            <img src="assets/products/gadget1.jpg" class="collection-product-thumb" alt="Gadget 1">
-            <img src="assets/products/gadget2.jpg" class="collection-product-thumb" alt="Gadget 2">
-            <img src="assets/products/gadget3.jpg" class="collection-product-thumb" alt="Gadget 3">
-            <img src="assets/products/gadget4.jpg" class="collection-product-thumb" alt="Gadget 4">
-            <!-- ...more images -->
-            </div>
-        </div>
-        <!-- Collection 2 -->
-        <div class="collection-showcase mb-5">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-            <h4 class="fw-bold mb-0">Trending Fashion</h4>
-            <a href="collections.html?col=trending-fashion" class="btn btn-link fw-semibold">View All</a>
-            </div>
-            <div class="collection-products-scroll d-flex flex-nowrap gap-3 overflow-auto pb-2">
-            <img src="assets/products/fashion1.jpg" class="collection-product-thumb" alt="Fashion 1">
-            <img src="assets/products/fashion2.jpg" class="collection-product-thumb" alt="Fashion 2">
-            <img src="assets/products/fashion3.jpg" class="collection-product-thumb" alt="Fashion 3">
-            <img src="assets/products/fashion4.jpg" class="collection-product-thumb" alt="Fashion 4">
-            <!-- ...more images -->
-            </div>
-        </div>
-        <!-- Repeat for other collections... -->
-        </div>
-    </section>
-    <div class="container my-4">
-        <div class="row align-items-center justify-content-between bg-warning rounded-4 p-4 shadow-sm" style="background: linear-gradient(90deg, #fffbe6 0%, #ffe066 100%);">
-            <div class="col-md-8">
-                <h2 class="fw-bold mb-2" style="color: #FF5CA8;">
-                    <i class="fas fa-bolt me-2 text-danger"></i> Flash Offers!
-                </h2>
-                <p class="mb-0 lead text-dark">
-                    Limited-time deals on top products. Grab your favorites before they're gone!
-                </p>
-            </div>
-            <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                <a href="products.html?cat=deals" class="btn btn-purple btn-lg px-4 shadow pulse">
-                    Shop Flash Deals <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-        <!-- Example offer cards row (can be dynamically generated) -->
-        <div class="row mt-4 g-3" id="flashOffersRow">
-            <div class="col-6 col-md-3">
-                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
-                    <img src="images/offer1.jpg" class="card-img-top" alt="Offer 1">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Wireless Earbuds</h5>
-                        <p class="card-text text-danger fw-bold mb-2">Now $29 <span class="text-muted text-decoration-line-through fs-6">$59</span></p>
-                        <a href="product.html?id=101" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
-                    <img src="images/offer2.jpg" class="card-img-top" alt="Offer 2">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Smart Watch</h5>
-                        <p class="card-text text-danger fw-bold mb-2">Now $49 <span class="text-muted text-decoration-line-through fs-6">$99</span></p>
-                        <a href="product.html?id=102" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 d-none d-md-block">
-                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
-                    <img src="images/offer3.jpg" class="card-img-top" alt="Offer 3">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Fashion Sneakers</h5>
-                        <p class="card-text text-danger fw-bold mb-2">Now $39 <span class="text-muted text-decoration-line-through fs-6">$79</span></p>
-                        <a href="product.html?id=103" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 d-none d-md-block">
-                <div class="card offer-hover-effect h-100 border-0 shadow-sm">
-                    <img src="images/offer4.jpg" class="card-img-top" alt="Offer 4">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Home Blender</h5>
-                        <p class="card-text text-danger fw-bold mb-2">Now $24 <span class="text-muted text-decoration-line-through fs-6">$49</span></p>
-                        <a href="product.html?id=104" class="btn btn-outline-primary btn-sm offer-hover-link">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
+    <section class="w-100 my-5" style="padding-left:0; padding-right:0; max-width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw;">
+        <div class="d-flex align-items-center mb-4" style="max-width: 1320px; margin: 0 auto;">
+            <h2 class="fw-bold mb-0" style="color: hsl(var(--primary-color)); letter-spacing: 1px;">
+                <i class="fas fa-thumbs-up me-2 text-pink"></i>
+                موصى به لك
+            </h2>
+            <span class="ms-3 badge rounded-pill" style="background: hsl(var(--tertiary-color)); color: hsl(var(--dark-surface)); font-size: 1rem; font-weight: 600;">Recommended for you</span>
+        </div>
+        <div class="row g-4" style="max-width: 1320px; margin: 0 auto;">
+            <!-- منتج 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card shadow-sm border-0 rounded-4 w-100 h-100 hover-shadow cool-collection-card" style="transition: box-shadow 0.2s, transform 0.18s;">
+                    <div class="cool-collection-img-wrapper">
+                        <img src="images/recommended1.jpg" alt="سماعة لاسلكية" class="img-fluid" style="max-height: 160px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold mb-2" style="color: hsl(var(--primary-color));">سماعة لاسلكية فاخرة</h5>
+                        <p class="card-text text-muted small mb-3">جودة صوت عالية وتصميم عصري</p>
+                        <a href="product.html?id=201" class="btn btn-outline-primary rounded-pill px-4">تسوق الآن</a>
+                    </div>
+                </div>
+            </div>
+            <!-- منتج 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card shadow-sm border-0 rounded-4 w-100 h-100 hover-shadow cool-collection-card" style="transition: box-shadow 0.2s, transform 0.18s;">
+                    <div class="cool-collection-img-wrapper">
+                        <img src="images/recommended2.jpg" alt="ساعة ذكية" class="img-fluid" style="max-height: 160px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold mb-2" style="color: hsl(var(--secondary-color));">ساعة ذكية أنيقة</h5>
+                        <p class="card-text text-muted small mb-3">تابع صحتك وأناقتك في آن واحد</p>
+                        <a href="product.html?id=202" class="btn btn-outline-primary rounded-pill px-4">اكتشف المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <!-- منتج 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card shadow-sm border-0 rounded-4 w-100 h-100 hover-shadow cool-collection-card" style="transition: box-shadow 0.2s, transform 0.18s;">
+                    <div class="cool-collection-img-wrapper">
+                        <img src="images/recommended3.jpg" alt="حقيبة ظهر" class="img-fluid" style="max-height: 160px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold mb-2" style="color: hsl(var(--accent-color));">حقيبة ظهر عصرية</h5>
+                        <p class="card-text text-muted small mb-3">مثالية للمدرسة أو السفر</p>
+                        <a href="product.html?id=203" class="btn btn-outline-primary rounded-pill px-4">تسوق الحقيبة</a>
+                    </div>
+                </div>
+            </div>
+            <!-- منتج 4 -->
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                <div class="card shadow-sm border-0 rounded-4 w-100 h-100 hover-shadow cool-collection-card" style="transition: box-shadow 0.2s, transform 0.18s;">
+                    <div class="cool-collection-img-wrapper">
+                        <img src="images/recommended4.jpg" alt="لعبة أطفال" class="img-fluid" style="max-height: 160px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold mb-2" style="color: hsl(var(--tertiary-color));">لعبة أطفال تعليمية</h5>
+                        <p class="card-text text-muted small mb-3">متعة وتعليم في آن واحد</p>
+                        <a href="product.html?id=204" class="btn btn-outline-primary rounded-pill px-4">تسوق اللعبة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- J. More Reasons to Shop -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">More Reasons to Shop</h2>
-            <div class="row g-4">
-                <!-- Mega Deals -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 more-reasons-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 more-reasons-title-mega">Mega Deals</h5>
-                            <p class="text-muted mb-3">Unbeatable prices on top products. Limited time only!</p>
-                            <a href="deals.html?type=mega" class="btn btn-danger btn-sm px-3 fw-semibold more-reasons-btn">View Mega Deals</a>
+    
+    <section class="hero-featured-products py-5 position-relative trendy-hero-section" style="background: linear-gradient(120deg, hsl(var(--tertiary-color), 0.18) 60%, hsl(var(--primary-color), 0.10) 100%); width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden;">
+        <!-- Trendy floating shapes for extra style -->
+        <div class="position-absolute flash-deal-banner-shape-1 rounded-circle" style="z-index:1;"></div>
+        <div class="position-absolute flash-deal-banner-shape-2 rounded-circle" style="z-index:1;"></div>
+        <div class="container-fluid px-0" style="max-width: 100vw; position: relative; z-index:2;">
+            <div class="row align-items-stretch g-4">
+                <!-- المنتج الأول -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card border-0 shadow-lg rounded-4 w-100 h-100 position-relative overflow-hidden trendy-card" style="min-height: 360px; background: linear-gradient(135deg, #fffbe6 60%, #ffe6fa 100%); transition: box-shadow 0.25s, transform 0.18s;">
+                        <div class="position-absolute top-0 end-0 m-3" style="z-index:2;">
+                            <span class="badge fs-6 px-3 py-2 shadow" style="background: hsl(var(--tertiary-color)); color: hsl(var(--dark-surface)); font-weight:600; letter-spacing:1px; box-shadow:0 2px 8px #ffe06655;">الأكثر رواجاً <i class="fas fa-fire text-danger ms-1"></i></span>
+                        </div>
+                        <img src="images/hero-product1.jpg" class="card-img-top w-100" alt="منتج مميز" style="object-fit:cover; height: 220px; border-radius: 0 0 2rem 2rem;">
+                        <div class="card-body d-flex flex-column px-4 py-4">
+                            <h2 class="card-title fw-bold mb-2" style="font-size:2.1rem; color: hsl(var(--primary-color)); letter-spacing:0.5px;">سماعات بلوتوث لاسلكية</h2>
+                            <p class="card-text text-muted mb-3 flex-grow-1" style="font-size:1.1rem;">استمتع بصوت نقي وتصميم عصري مع أحدث سماعات البلوتوث.</p>
+                            <a href="product.html?id=101" class="btn btn-primary btn-lg mt-auto px-4 rounded-pill trendy-btn-shadow" style="font-weight:700; letter-spacing:0.5px;">تسوق الآن <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- In Focus -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 more-reasons-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 more-reasons-title-focus">In Focus</h5>
-                            <p class="text-muted mb-3">Spotlight on trending products and must-have picks.</p>
-                            <a href="deals.html?type=focus" class="btn btn-primary btn-sm px-3 fw-semibold more-reasons-btn">See What's Hot</a>
+                <!-- المنتج الثاني -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card border-0 shadow-lg rounded-4 w-100 h-100 position-relative overflow-hidden trendy-card" style="min-height: 360px; background: linear-gradient(135deg, #ffe6fa 60%, #e6f0ff 100%); transition: box-shadow 0.25s, transform 0.18s;">
+                        <div class="position-absolute top-0 end-0 m-3" style="z-index:2;">
+                            <span class="badge fs-6 px-3 py-2 shadow" style="background: hsl(var(--primary-color)); color: #fff; font-weight:600; letter-spacing:1px; box-shadow:0 2px 8px #ff5ca855;">عرض خاص <i class="fas fa-bolt text-warning ms-1"></i></span>
+                        </div>
+                        <img src="images/hero-product2.jpg" class="card-img-top w-100" alt="منتج مميز" style="object-fit:cover; height: 220px; border-radius: 0 0 2rem 2rem;">
+                        <div class="card-body d-flex flex-column px-4 py-4">
+                            <h2 class="card-title fw-bold mb-2" style="font-size:2.1rem; color: hsl(var(--secondary-color)); letter-spacing:0.5px;">ساعة ذكية متعددة الوظائف</h2>
+                            <p class="card-text text-muted mb-3 flex-grow-1" style="font-size:1.1rem;">تابع صحتك واشعاراتك مع ساعة ذكية أنيقة وعملية.</p>
+                            <a href="product.html?id=102" class="btn btn-primary btn-lg mt-auto px-4 rounded-pill trendy-btn-shadow" style="font-weight:700; letter-spacing:0.5px;">اكتشف المزيد <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- Editor's Picks -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 more-reasons-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 more-reasons-title-editors">Editor's Picks</h5>
-                            <p class="text-muted mb-3">Handpicked selections for quality and value.</p>
-                            <a href="deals.html?type=editors" class="btn btn-success btn-sm px-3 fw-semibold more-reasons-btn">Browse Picks</a>
+                <!-- المنتج الثالث -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card border-0 shadow-lg rounded-4 w-100 h-100 position-relative overflow-hidden trendy-card" style="min-height: 360px; background: linear-gradient(135deg, #e6f0ff 60%, #fffbe6 100%); transition: box-shadow 0.25s, transform 0.18s;">
+                        <div class="position-absolute top-0 end-0 m-3" style="z-index:2;">
+                            <span class="badge fs-6 px-3 py-2 shadow" style="background: hsl(var(--secondary-color)); color: #fff; font-weight:600; letter-spacing:1px; box-shadow:0 2px 8px #4fc3f755;">جديد <i class="fas fa-star text-warning ms-1"></i></span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more deal containers as needed -->
-            <div class="row g-4 mt-4">
-                <!-- Flash Sale -->
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm border-0 more-reasons-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 more-reasons-title-flash">Flash Sale</h5>
-                            <p class="text-muted mb-3">Hurry! Limited stock and time on these hot offers.</p>
-                            <a href="deals.html?type=flash" class="btn btn-warning btn-sm px-3 fw-semibold more-reasons-btn more-reasons-btn-flash">Shop Flash Sale</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Best Value -->
-                <div class="col-md-6">
-                    <div class="card h-100 shadow-sm border-0 more-reasons-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 more-reasons-title-value">Best Value</h5>
-                            <p class="text-muted mb-3">Top-rated products at the best prices, just for you.</p>
-                            <a href="deals.html?type=value" class="btn btn-secondary btn-sm px-3 fw-semibold more-reasons-btn">See Best Value</a>
+                        <img src="images/hero-product3.jpg" class="card-img-top w-100" alt="منتج مميز" style="object-fit:cover; height: 220px; border-radius: 0 0 2rem 2rem;">
+                        <div class="card-body d-flex flex-column px-4 py-4">
+                            <h2 class="card-title fw-bold mb-2" style="font-size:2.1rem; color: hsl(var(--accent-color)); letter-spacing:0.5px;">حقيبة ظهر عصرية</h2>
+                            <p class="card-text text-muted mb-3 flex-grow-1" style="font-size:1.1rem;">حقيبة ظهر بتصميم أنيق ومساحة واسعة تناسب جميع احتياجاتك.</p>
+                            <a href="product.html?id=103" class="btn btn-primary btn-lg mt-auto px-4 rounded-pill trendy-btn-shadow" style="font-weight:700; letter-spacing:0.5px;">تسوق الحقيبة <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- K. Recommended For You -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Recommended For You</h2>
-            <div class="row g-4" id="recommendedPackages">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 recommended-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 recommended-title-starter">Starter Pack</h5>
-                            <p class="text-muted mb-3">Perfect for new users: essential products at a great price.</p>
-                            <a href="products.html?package=starter" class="btn btn-primary btn-sm px-3 fw-semibold recommended-btn">View Starter Pack</a>
+
+    <!-- قسم التجميعات المميزة - تقسيم وتنظيم User Friendly -->
+    <section class="cool-collections-banner py-5" style="background: linear-gradient(120deg, #fffbe6 60%, #e6f0ff 100%); width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+        <div class="container-fluid px-0" style="max-width: 100vw;">
+            <h2 class="fw-bold text-center mb-5" style="letter-spacing:1px;">تجميعات مميزة لك</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- تجميعة الصيف الرائعة -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge">جديد</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection1.jpg" alt="تجميعة الصيف" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                        </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">تجميعة الصيف الرائعة</h3>
+                            <p class="text-muted mb-3 flex-grow-1">كل ما تحتاجه لصيف منعش: ملابس، إكسسوارات، وألعاب شاطئ.</p>
+                            <a href="products.html?collection=summer" class="btn btn-primary px-4 mt-auto">تسوق الآن <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 recommended-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 recommended-title-family">Family Bundle</h5>
-                            <p class="text-muted mb-3">A curated bundle for families, with savings on top picks.</p>
-                            <a href="products.html?package=family" class="btn btn-success btn-sm px-3 fw-semibold recommended-btn">Shop Family Bundle</a>
+                <!-- تجميعة المنزل العصري -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge" style="background:hsl(var(--primary-color));">الأكثر مبيعاً</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection2.jpg" alt="تجميعة المنزل العصري" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                        </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">منزلك العصري</h3>
+                            <p class="text-muted mb-3 flex-grow-1">ديكورات وأدوات منزلية عصرية تضيف لمسة فريدة لمنزلك.</p>
+                            <a href="products.html?collection=modern-home" class="btn btn-primary px-4 mt-auto">اكتشف المجموعة <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 recommended-card">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold mb-2 recommended-title-premium">Premium Set</h5>
-                            <p class="text-muted mb-3">Upgrade your experience with our exclusive premium set.</p>
-                            <a href="products.html?package=premium" class="btn btn-warning btn-sm px-3 fw-semibold recommended-btn recommended-btn-premium">Explore Premium Set</a>
+                <!-- تجميعة الإلكترونيات الحديثة -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge" style="background:hsl(var(--secondary-color));">خصومات</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection3.jpg" alt="إلكترونيات حديثة" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                        </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">إلكترونيات حديثة</h3>
+                            <p class="text-muted mb-3 flex-grow-1">أحدث الأجهزة الذكية والإلكترونيات بأسعار منافسة.</p>
+                            <a href="products.html?collection=electronics" class="btn btn-primary px-4 mt-auto">تسوق الإلكترونيات <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- L. Sticker Offer Slider -->
-    <section class="py-4">
-        <div class="container-fluid px-0 sticker-offer-slider-container">
-            <h2 class="text-center mb-4 sticker-offer-slider-title">🔥 Hot Sticker Offers</h2>
-            <div id="stickerOfferSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap sticker-offer-slider-flex">
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sticker 1" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-1">Buy 1 Get 1 Free</h5>
-                                <p class="mb-2 sticker-offer-desc">On select fashion stickers</p>
-                                <a href="products.html?cat=stickers&offer=bogof" class="btn btn-warning btn-sm fw-semibold sticker-offer-btn">Shop Now</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-2">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Sticker 2" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-2">20% OFF</h5>
-                                <p class="mb-2 sticker-offer-desc">On all tech sticker packs</p>
-                                <a href="products.html?cat=stickers&offer=20off" class="btn btn-primary btn-sm fw-semibold sticker-offer-btn">Grab Deal</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-3">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Sticker 3" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-3">Limited Edition</h5>
-                                <p class="mb-2 sticker-offer-desc">Collectible sticker sets</p>
-                                <a href="products.html?cat=stickers&offer=limited" class="btn btn-purple btn-sm fw-semibold sticker-offer-btn sticker-offer-btn-purple">See Collection</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-4">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="Sticker 4" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-4">Free Shipping</h5>
-                                <p class="mb-2 sticker-offer-desc">On sticker orders over $25</p>
-                                <a href="products.html?cat=stickers&offer=shipping" class="btn btn-success btn-sm fw-semibold sticker-offer-btn">Shop Stickers</a>
-                            </div>
+                <!-- تجميعة الجمال والعناية -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge" style="background:hsl(var(--accent-color));">حصري</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection4.jpg" alt="عروض الجمال والعناية" class="img-fluid w-100 h-100" style="object-fit:cover;">
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center align-items-center flex-wrap sticker-offer-slider-flex">
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-5">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Sticker 5" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-5">Flash Sale</h5>
-                                <p class="mb-2 sticker-offer-desc">Up to 60% off select stickers</p>
-                                <a href="products.html?cat=stickers&offer=flash" class="btn btn-warning btn-sm fw-semibold sticker-offer-btn">Hurry Up</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-6">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135747.png" alt="Sticker 6" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-6">Exclusive Art</h5>
-                                <p class="mb-2 sticker-offer-desc">Artist-designed sticker packs</p>
-                                <a href="products.html?cat=stickers&offer=artist" class="btn btn-danger btn-sm fw-semibold sticker-offer-btn">View Art Packs</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-7">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135790.png" alt="Sticker 7" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-7">New Arrivals</h5>
-                                <p class="mb-2 sticker-offer-desc">Fresh sticker designs just in</p>
-                                <a href="products.html?cat=stickers&offer=new" class="btn btn-info btn-sm fw-semibold sticker-offer-btn sticker-offer-btn-info">Browse New</a>
-                            </div>
-                            <div class="sticker-offer p-4 m-2 text-center sticker-offer-1 sticker-offer-8">
-                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135791.png" alt="Sticker 8" width="60" class="mb-2">
-                                <h5 class="fw-bold mb-1 sticker-offer-title-8">Eco-Friendly</h5>
-                                <p class="mb-2 sticker-offer-desc">Sustainable sticker options</p>
-                                <a href="products.html?cat=stickers&offer=eco" class="btn btn-success btn-sm fw-semibold sticker-offer-btn">Go Green</a>
-                            </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">عروض الجمال والعناية</h3>
+                            <p class="text-muted mb-3 flex-grow-1">منتجات عناية وجمال أصلية من أفضل الماركات.</p>
+                            <a href="products.html?collection=beauty" class="btn btn-primary px-4 mt-auto">اكتشف العروض <i class="fas fa-arrow-left ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#stickerOfferSlider" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#stickerOfferSlider" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- تجميعة الأطفال والألعاب -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge" style="background:hsl(var(--tertiary-color)); color:#222;">موصى به</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection5.jpg" alt="عالم الأطفال والألعاب" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                        </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">عالم الأطفال والألعاب</h3>
+                            <p class="text-muted mb-3 flex-grow-1">كل ما يحتاجه طفلك من ألعاب وهدايا تعليمية وترفيهية.</p>
+                            <a href="products.html?collection=kids" class="btn btn-primary px-4 mt-auto">تسوق للأطفال <i class="fas fa-arrow-left ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- تجميعة عروض اليوم -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="cool-collection-card flex-fill position-relative shadow-lg rounded-4 overflow-hidden h-100 d-flex flex-column">
+                        <span class="cool-collection-badge" style="background:hsl(var(--danger-color));">عروض اليوم</span>
+                        <div class="cool-collection-img-wrapper">
+                            <img src="images/collection6.jpg" alt="عروض اليوم فقط" class="img-fluid w-100 h-100" style="object-fit:cover;">
+                        </div>
+                        <div class="p-4 flex-grow-1 d-flex flex-column">
+                            <h3 class="fw-bold mb-2">عروض اليوم فقط</h3>
+                            <p class="text-muted mb-3 flex-grow-1">تخفيضات حصرية على منتجات مختارة ليوم واحد فقط.</p>
+                            <a href="products.html?collection=daily-deals" class="btn btn-primary px-4 mt-auto">اغتنم الفرصة <i class="fas fa-arrow-left ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -637,159 +804,132 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="trendy-footer">
-        <div class="footer-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-            </svg>
-        </div>
-        <div class="footer-content">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="footer-brand">
-                            <h3 class="brand-title">
-                                <i class="fas fa-shopping-bag brand-icon"></i>
-                                Modex
-                            </h3>
-                            <p class="brand-description">Your trusted marketplace for authentic trading experiences. Connect, discover, and trade with confidence in our global community.</p>
-                            <div class="social-links">
-                                <a href="#" class="social-link facebook" title="Facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-link twitter" title="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link instagram" title="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="social-link youtube" title="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="social-link tiktok" title="TikTok">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-section">
-                            <h5 class="section-title">Explore</h5>
-                            <ul class="footer-links">
-                                <li><a href="index.html">🏠 Home</a></li>
-                                <li><a href="products.html">🛍️ Shop All</a></li>
-                                <li><a href="about.html">ℹ️ About Us</a></li>
-                                <li><a href="contact.html">📧 Contact</a></li>
-                                <li><a href="wishlist.html">❤️ Wishlist</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-section">
-                            <h5 class="section-title">Categories</h5>
-                            <ul class="footer-links">
-                                <li><a href="#">📱 Electronics</a></li>
-                                <li><a href="#">👕 Fashion</a></li>
-                                <li><a href="#">⚽ Sports</a></li>
-                                <li><a href="#">📚 Books</a></li>
-                                <li><a href="#">🏠 Home & Garden</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-section">
-                            <h5 class="section-title">Support</h5>
-                            <ul class="footer-links">
-                                <li><a href="#">💬 Help Center</a></li>
-                                <li><a href="#">📦 Shipping Info</a></li>
-                                <li><a href="#">↩️ Returns</a></li>
-                                <li><a href="#">📏 Size Guide</a></li>
-                                <li><a href="#">🔧 Track Order</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-section">
-                            <h5 class="section-title">Account</h5>
-                            <ul class="footer-links">
-                                <li><a href="login.html">🔐 Login</a></li>
-                                <li><a href="register.html">📝 Sign Up</a></li>
-                                <li><a href="#">👤 My Profile</a></li>
-                                <li><a href="#">📋 Order History</a></li>
-                                <li><a href="#">⚙️ Settings</a></li>
-                            </ul>
-                        </div>
+    <footer class="modex-footer mt-5 pt-5 pb-3" style="background: linear-gradient(120deg, #fffbe6 60%, #ffe7e7 100%); border-top-left-radius: 2.5rem; border-top-right-radius: 2.5rem; box-shadow: 0 -2px 24px rgba(0,0,0,0.07);">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <!-- Logo & Slogan -->
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <a href="index.html" class="d-inline-flex align-items-center mb-2 text-decoration-none">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Modex Logo" width="48" class="me-2" style="filter: drop-shadow(0 2px 8px #ffb6b6);">
+                        <span class="fw-bold fs-4" style="color: #ff6f61; font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Modex</span>
+                    </a>
+                    <p class="mb-0 text-muted" style="font-size:1.05rem;">هدايا وألعاب تفرح القلب وتبهر العيون</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold mb-3" style="color:#ff6f61;">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted footer-link">الرئيسية</a></li>
+                        <li><a href="products.html" class="text-decoration-none text-muted footer-link">المنتجات</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-muted footer-link">عن مودكس</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted footer-link">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <!-- Categories -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold mb-3" style="color:#ffb300;">الأقسام</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html?collection=toys" class="text-decoration-none text-muted footer-link">ألعاب</a></li>
+                        <li><a href="products.html?collection=gifts" class="text-decoration-none text-muted footer-link">هدايا</a></li>
+                        <li><a href="products.html?collection=kids" class="text-decoration-none text-muted footer-link">للأطفال</a></li>
+                        <li><a href="products.html?collection=daily-deals" class="text-decoration-none text-muted footer-link">عروض اليوم</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter & Social -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h6 class="fw-bold mb-3" style="color:#0d6efd;">اشترك في النشرة البريدية</h6>
+                    <form class="d-flex mb-3 justify-content-center justify-content-md-end" style="max-width: 320px; margin-inline:auto;">
+                        <input type="email" class="form-control rounded-start-pill border-0 shadow-sm" placeholder="بريدك الإلكتروني" style="background: #fff9e5;">
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4" style="background: linear-gradient(90deg,#ffb300,#ff6f61); border:none;">اشترك</button>
+                    </form>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="text-decoration-none" aria-label="Instagram" style="color:#e1306c; font-size:1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none" aria-label="Facebook" style="color:#1877f3; font-size:1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none" aria-label="Twitter" style="color:#1da1f2; font-size:1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none" aria-label="WhatsApp" style="color:#25d366; font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
-                <!-- Footer Bottom -->
-                <div class="footer-bottom">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="payment-methods">
-                                <span class="payment-text">We Accept:</span>
-                                <div class="payment-icons">
-                                    <i class="fab fa-cc-visa"></i>
-                                    <i class="fab fa-cc-mastercard"></i>
-                                    <i class="fab fa-cc-paypal"></i>
-                                    <i class="fab fa-cc-apple-pay"></i>
-                                    <i class="fab fa-google-pay"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-md-end">
-                            <div class="footer-copy">
-                                <p>&copy; 2024 Modex. Made with 💜 for smart Modexs</p>
-                                <div class="footer-legal">
-                                    <a href="#">Privacy</a> | 
-                                    <a href="#">Terms</a> | 
-                                    <a href="#">Cookies</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <hr class="my-4" style="border-color:#ffe7e7;">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small class="text-muted">© 2024 Modex. جميع الحقوق محفوظة. | صُنع بحب <i class="fas fa-heart text-danger"></i></small>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="newsletter-content">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-6">
-                        <h2 class="h1 mb-3">Stay in the Loop!</h2>
-                        <p class="lead mb-4">Get exclusive deals, new arrivals, and insider news delivered straight to your inbox.</p>
-                        <form class="newsletter-form" id="newsletterForm">
-                            <div class="input-group input-group-lg">
-                                <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" required>
-                                <button class="btn btn-light btn-lg" type="submit">
-                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
-                                </button>
-                            </div>
-                            <small class="text-white-50 mt-2 d-block">No spam, unsubscribe anytime</small>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Loading Spinner -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/products.js"></script>
     <script src="js/search.js"></script>
+
     <script>
+            // Carousel scroll logic - user friendly arrows
+            (function() {
+                const row = document.getElementById('products-scroll-row');
+                const leftBtn = document.getElementById('products-scroll-left');
+                const rightBtn = document.getElementById('products-scroll-right');
+                if (!row || !leftBtn || !rightBtn) return;
+
+                function scrollByCard(dir) {
+                    // Find a card width (including gap)
+                    const card = row.querySelector('.product-showcase-card');
+                    if (!card) return;
+                    const style = window.getComputedStyle(row);
+                    const gap = parseInt(style.gap) || 24;
+                    const cardWidth = card.offsetWidth + gap;
+                    row.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+                }
+
+                leftBtn.addEventListener('click', function() {
+                    scrollByCard(-1);
+                });
+                rightBtn.addEventListener('click', function() {
+                    scrollByCard(1);
+                });
+
+                // Always show arrows on desktop, but disable if can't scroll further
+                function updateArrows() {
+                    // Always show arrows, but disable if at edge
+                    const maxScroll = row.scrollWidth - row.clientWidth - 5;
+                    if (row.scrollLeft <= 5) {
+                        leftBtn.disabled = true;
+                        leftBtn.style.opacity = "0.5";
+                        leftBtn.style.pointerEvents = "none";
+                    } else {
+                        leftBtn.disabled = false;
+                        leftBtn.style.opacity = "0.92";
+                        leftBtn.style.pointerEvents = "";
+                    }
+                    if (row.scrollLeft >= maxScroll) {
+                        rightBtn.disabled = true;
+                        rightBtn.style.opacity = "0.5";
+                        rightBtn.style.pointerEvents = "none";
+                    } else {
+                        rightBtn.disabled = false;
+                        rightBtn.style.opacity = "0.92";
+                        rightBtn.style.pointerEvents = "";
+                    }
+                }
+                row.addEventListener('scroll', updateArrows);
+                window.addEventListener('resize', updateArrows);
+                // Initial state
+                setTimeout(updateArrows, 200);
+
+                // Show arrows on hover for extra friendliness (optional)
+                row.addEventListener('mouseenter', function() {
+                    leftBtn.style.visibility = 'visible';
+                    rightBtn.style.visibility = 'visible';
+                });
+                row.addEventListener('mouseleave', function() {
+                    leftBtn.style.visibility = 'visible';
+                    rightBtn.style.visibility = 'visible';
+                });
+            })();
+
+
     function updateModexTime() {
         const el = document.getElementById('modexCurrentTime');
         if (!el) return;
@@ -799,5 +939,6 @@
     setInterval(updateModexTime, 1000);
     updateModexTime();
     </script>
+
 </body>
 </html>
